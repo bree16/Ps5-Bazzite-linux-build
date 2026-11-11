@@ -1,0 +1,12 @@
+# Never commit binaries, images, payloads, game/trainer files, or secrets
+*.elf
+*.img
+*.7z
+*.7z.*
+*.iso
+*.exe
+*.bin
+*.pkg
+.env
+*.key
+*.token
