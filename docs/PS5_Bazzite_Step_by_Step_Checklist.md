@@ -39,21 +39,37 @@ A condensed execution checklist based on the comprehensive project guide. Use th
 
 ## C. Prepare the PS5
 
+### Network and jailbreak page
+
 - [ ] Connect the PS5 to the network using wired Ethernet (the tested setup used Ethernet).
 - [ ] Configure network/DNS exactly as directed by the current exploit guide. Do not copy an old DNS value without confirming it is still recommended.
 - [ ] Open **Settings → User's Guide** (menu wording/location can vary).
 - [ ] Confirm the expected jailbreak landing page opens.
 - [ ] Accept a certificate/security prompt only if it is the expected prompt for the page you intentionally configured.
-- [ ] Select **Jailbreak**.
-- [ ] Wait for the completion message (about 5–10 seconds in the tested setup).
+
+### Autoload for Linux-only use
+
+- [ ] Open **Payloads → Autoload**.
+- [ ] Leave **WebKit** enabled in Autoload.
+- [ ] Make sure **etaHEN** and **kstuff** are **not** enabled in Autoload. Remove them if an earlier emulation setup added them.
+- [ ] Keep **Payload Manager** in Autoload only if your working setup requires it.
+- [ ] Do not add other emulation payloads yet.
+- [ ] If you removed etaHEN/kstuff from a previous emulation setup, **restart the PS5 once** to clear the old payload state.
+
+### Jailbreak and Payload Manager (once per PS5 power-on)
+
+- [ ] Open User Guide, select **Jailbreak**, and wait for the completion message (about 5–10 seconds in the tested setup).
 - [ ] Press **Circle** to return to the jailbreak interface.
-- [ ] Open **Payloads**.
-- [ ] Download/install **PS5 Payload Manager** again.
+- [ ] Open **Payloads** and download/install **PS5 Payload Manager** again.
 - [ ] Wait for the autoloader to load **`54321`**.
 - [ ] Exit to the normal PS5 interface.
 - [ ] Open Payload Manager from the PS5 **Media** tab.
 - [ ] Confirm payload icons appear beside entries such as ShadowMount Plus and Payload Manager.
-- [ ] If the ELF-not-loaded message appears or icons are blank/black, repeat the full sequence from User Guide. Do not continue with a partially initialized list.
+- [ ] If the ELF-not-loaded message appears or icons are blank/black: confirm the jailbreak ran during this PS5 session and that you waited for `54321`. Repeat from User Guide only if the PS5 has restarted since the jailbreak.
+- [ ] You do **not** need to rerun the jailbreak again during the same PS5 session.
+
+### Power and HDMI settings
+
 - [ ] Set **Supply Power to USB Ports** in Rest Mode to **Always**.
 - [ ] Turn **HDMI Device Link** off.
 - [ ] Make sure **etaHEN** and **kstuff** are not running before Linux boot.
@@ -84,6 +100,8 @@ A condensed execution checklist based on the comprehensive project guide. Use th
 
 ## F. Repeat the boot process after a PS5 reboot
 
+Only needed after the PS5 restarts or shuts down. If the PS5 has stayed on since a successful jailbreak, skip to launching the loader.
+
 - [ ] Return to the normal PS5 interface.
 - [ ] Open User Guide and accept the expected certificate/security prompt.
 - [ ] Select **Jailbreak** and wait for success.
@@ -93,7 +111,7 @@ A condensed execution checklist based on the comprehensive project guide. Use th
 - [ ] Exit to the PS5 interface.
 - [ ] Open Payload Manager from **Media**.
 - [ ] Confirm the payload icons are visible.
-- [ ] Confirm etaHEN and kstuff are off.
+- [ ] Confirm **WebKit** is the only required Autoload entry and etaHEN/kstuff are not enabled or running.
 - [ ] Confirm the Bazzite SSD is connected.
 - [ ] Launch the Bazzite loader.
 - [ ] Wait for solid orange, then press the physical power button once.
